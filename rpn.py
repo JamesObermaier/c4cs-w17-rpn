@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 
-def add(arg1, arg2):
-	return arg1 + arg2
-
-def subtract(arg1, arg2):
-	return arg1 - arg2
+import operator
 
 operators = {
-	'+': add,
-	'-': subtract,
+	'+': operator.add,
+	'-': operator.sub,
+	'*': operator.mul,
+	'/': operator.truediv,
 }
 
 def calculate(arg):
