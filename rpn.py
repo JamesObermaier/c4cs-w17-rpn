@@ -2,7 +2,7 @@
 
 import operator
 
-operators = {
+OPERATORS = {
 	'+': operator.add,
 	'-': operator.sub,
 	'*': operator.mul,
@@ -18,7 +18,7 @@ def calculate(arg):
 		except:
 			arg2 = stack.pop()
 			arg1 = stack.pop()
-			operator = operators[operand]
+			operator = OPERATORS[operand]
 			result = operator(arg1, arg2)
 			stack.append(result)			
 	return stack.pop()
