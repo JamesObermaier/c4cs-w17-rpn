@@ -4,6 +4,6 @@ python:
 install:
     - pip install coveralls
 script: 
-    coverage run make test
+    make test
 after_success:
     coveralls
