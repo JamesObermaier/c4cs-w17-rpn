@@ -1,4 +1,4 @@
-require 'coveralls'
+require 'Coveralls'
 Coveralls.wear!
 
 import unittest
