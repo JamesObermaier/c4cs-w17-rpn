@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
+import readline
 import operator
+import sys
 
 OPERATORS = {
 	'+': operator.add,
@@ -27,8 +29,17 @@ def calculate(arg):
 
 def main():
 	while True:
-		result = calculate(input('rpn calc> '))
-		print ("Result:", result)
+		try:
+			read = input('rpn calc> ')
+			if read == 'q':
+				break
+			result = calculate(read)
+			print ("Result:", result)
+		except KeyboardInterrupt:
+			sys.exit(0)
+		except:
+			print ("could not handle input please retry")
+
 
 if __name__ == '__main__':
 	main()
