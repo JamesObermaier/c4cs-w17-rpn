@@ -1,8 +1,6 @@
-require 'Coveralls'
-Coveralls.wear!
-
 import unittest
 import rpn
+
 
 class TestBasics(unittest.TestCase):
 	def test_add(self):
